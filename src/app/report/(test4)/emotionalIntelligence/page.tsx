@@ -1,9 +1,36 @@
-import React from 'react'
+import React from "react";
 
 const EmotionalIntelligence = () => {
   return (
-    <div>EmotionalIntelligence</div>
-  )
-}
+    <section className="px-6  bg-white">
+      <h2 className="text-2xl font-bold">
+        Understanding{" "}
+        <span className="text-[#398BFF]">Emotional Intelligence</span>
+      </h2>
 
-export default EmotionalIntelligence
+      <h3 className="mt-4 font-bold text-lg ">Introduction</h3>
+
+      <p className="text-[#5B6871] mt-2">
+        Congratulations on taking the first step for personalized Career
+        Planning & Assessment! We understand the significance of making informed
+        decisions as you navigate your academic journey and future career. We
+        are committed to empowering individuals with the tools and insights
+        needed to confidently navigate the world of careers and education.
+      </p>
+
+      <p className="text-[#5B6871] mt-4">
+        <span className="font-bold text-black">
+        The Daniel Goleman Emotional Intelligence Test,
+        </span>{" "}
+        based on the framework... personality explorer psychometric assessment
+        tool that helps individuals understand their preferences, strengths, and
+        areas for growth. Developed by Isabel Briggs Myers and Katharine Cook
+        Briggs, the MBTI categorizes individuals into 16 personality types based
+        on four dichotomies. The goal is to gain deeper self-awareness, enhance
+        personal development, and improve interpersonal relationships
+      </p>
+    </section>
+  );
+};
+
+export default EmotionalIntelligence;

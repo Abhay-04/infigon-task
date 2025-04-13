@@ -2,12 +2,12 @@ import React from "react";
 
 const interest = () => {
   return (
-    <section className="px-6 py-8 bg-white">
+    <section className="px-6  bg-white">
       <h2 className="text-2xl font-bold">
         Understanding <span className="text-[#309759]">Interest Explorer</span>
       </h2>
 
-      <h3 className="mt-4 font-semibold text-lg">Introduction</h3>
+      <h3 className="mt-4 font-bold text-lg">Introduction</h3>
 
       <p className="text-gray-700 mt-2">
         Congratulations on taking the first step for personalized Career
@@ -18,7 +18,7 @@ const interest = () => {
       </p>
 
       <p className="text-gray-700 mt-4">
-        <span className="font-semibold">
+        <span className="font-bold text-black">
           To understand your interest RIASEC model was used.
         </span>{" "}
         It is a personality explorer psychometric assessment tool that helps

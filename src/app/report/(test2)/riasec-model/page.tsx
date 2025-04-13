@@ -7,23 +7,58 @@ export default function RIASECSection() {
       <h3 className="text-lg font-bold text-[#0047AB]">Themes of RIASEC</h3>
 
       <div className="flex flex-col items-center my-6">
-        <div className="relative w-[300px] h-[300px] rounded-full flex items-center justify-center">
-          {riasecThemes.map((theme, index) => (
-            <div
-              key={theme.code}
-              className="absolute text-sm font-medium"
+      <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full flex items-center justify-center">
+      {/* Donut Arcs */}
+      {riasecThemes.map((theme, index) => (
+        <div
+          key={theme.code}
+          className="absolute w-full h-full"
+          style={{
+            clipPath: "polygon(50% 50%, 100% 0, 100% 100%)",
+            transform: `rotate(${index * 60}deg)`,
+          }}
+        >
+          <div
+            className="w-full h-full rounded-full flex items-center justify-center "
+            style={{
+              backgroundColor: theme.color,
+              transform: "rotate(60deg)",
+            }}
+          >
+            {/* Center letter inside arc */}
+            <span
+              className="text-white text-xs font-bold"
               style={{
-                transform: `rotate(${index * 60}deg) translate(120px) rotate(-${index * 60}deg)`,
-                color: theme.color
+                transform: `rotate(-60deg) translate(135px) rotate(60deg)`,
               }}
             >
-              {theme.label}
-            </div>
-          ))}
-          <p className="absolute w-40 text-center text-sm text-gray-600">
-            Click on the coloured arcs to know about the RIASEC personalities.
-          </p>
+              {theme.code}
+            </span>
+          </div>
         </div>
+      ))}
+
+      {/* Central White Donut */}
+      <div className="absolute w-[230px] h-[230px] sm:w-[300px] sm:h-[300px] rounded-full bg-white flex flex-col items-center justify-center text-center px-3">
+        <p className="text-sm text-gray-600">
+          <span className="font-semibold">Click</span> on the coloured arcs to
+          know about the RIASEC personalities.
+        </p>
+      </div>
+
+      {/* Outer Labels */}
+      {riasecThemes.map((theme, index) => (
+        <div
+          key={theme.code}
+          className="absolute text-md font-bold text-white "
+          style={{
+            transform: `rotate(${index * 60}deg) translate(170px) rotate(-${index * 60}deg)`,
+          }}
+        >
+          {theme.code}
+        </div>
+      ))}
+    </div>
       </div>
 
       <h4 className="text-[#0047AB] font-bold mt-8">

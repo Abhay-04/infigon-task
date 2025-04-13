@@ -98,7 +98,7 @@ export default function RouteLayout({ children }: RouteLayoutProps) {
 
   return (
     <div>
-      <div className="mb-10 w-full">
+      <div className="sm:mb-10 mb-4 w-full">
         <CareerAnalysis />
       </div>
 

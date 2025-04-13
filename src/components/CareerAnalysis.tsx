@@ -1,9 +1,9 @@
 // components/CareerAnalysisReport.tsx
 export default function CareerAnalysis() {
   return (
-    <section className="max-w-full border-b bg-white">
+    <section className="max-w-full border-b bg-white   ">
       {/* Header + Card CTA */}
-      <div className="grid grid-cols-1 md:grid-cols-12 border-b px-4 md:px-20 py-6 gap-6">
+      <div className="sm:grid grid-cols-1 md:grid-cols-12 border-b px-4 md:px-20 py-6 gap-6  hidden">
         <div className="md:col-span-8 space-y-2">
           <h2 className="text-xl md:text-2xl font-semibold">
             Your Career Analysis Report
@@ -14,14 +14,16 @@ export default function CareerAnalysis() {
           </p>
         </div>
 
-        <div className="md:col-span-4 border rounded-lg shadow-sm p-4 flex flex-col gap-2">
+        <div className="md:col-span-4 border rounded-lg shadow-sm p-4 grid grid-cols-12 gap-2">
+          <div className="sm:col-span-10 col-span-12">
           <p className="font-semibold text-sm">
             Want To Speak To An Expert Career Counsellor?
           </p>
           <p className="text-sm text-gray-500">
             Explore a list of 1000+ Expert Career Counsellors near you!
           </p>
-          <div className="mt-2">
+          </div>
+          <div className="mt-2 sm:col-span-2 col-span-12">
             <button className="bg-gray-100 text-sm font-medium px-4 py-2 rounded hover:bg-gray-200 cursor-pointer w-full md:w-auto">
               See All
             </button>
@@ -30,8 +32,8 @@ export default function CareerAnalysis() {
       </div>
 
       {/* Career Options */}
-      <div className="flex flex-col md:flex-row flex-wrap items-center justify-between gap-6 py-6 px-4 md:px-20">
-        <div className="flex flex-wrap items-center gap-4">
+      <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-6 py-6 px-4 md:px-20">
+        <div className="flex flex-wrap items-center gap-4 pr-6 sm:border-r-2 border-gray-200">
           <p className="text-lg md:text-xl text-gray-500">
             Your <span className="text-[#0047AB] font-bold">TOP 3</span> Career
             Options
