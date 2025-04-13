@@ -15,23 +15,38 @@ type TestKey = "test1" | "test2" | "test3" | "test4" | "test5";
 
 const testLinks: Record<TestKey, { label: string; href: string }[]> = {
   test1: [
-    { label: "Understanding Personality Explorer", href: "/report/personality-explorer" },
+    {
+      label: "Understanding Personality Explorer",
+      href: "/report/personality-explorer",
+    },
     { label: "Personality Type", href: "/report/personality-type" },
     { label: "Your Result", href: "/report/personality-result" },
   ],
   test2: [
-    { label: "Understanding Interest Explorer", href: "/report/interest-explorer" },
+    {
+      label: "Understanding Interest Explorer",
+      href: "/report/interest-explorer",
+    },
     { label: "RIASEC Model", href: "/report/riasec-model" },
     { label: "Your Result", href: "/report/interestReport" },
   ],
   test3: [
-    { label: "Understanding Career Motivators", href: "/report/careerMotivator" },
+    {
+      label: "Understanding Career Motivators",
+      href: "/report/careerMotivator",
+    },
     { label: "10 Career Motivators", href: "/report/careerOptions" },
     { label: "Your Result", href: "/report/careerResult" },
   ],
   test4: [
-    { label: "Understanding Emotional Intelligence", href: "/report/emotionalIntelligence" },
-    { label: "Daniel Goleman Emotional Intelligence Test", href: "/report/emotionalIntellegenceTest" },
+    {
+      label: "Understanding Emotional Intelligence",
+      href: "/report/emotionalIntelligence",
+    },
+    {
+      label: "Daniel Goleman Emotional Intelligence Test",
+      href: "/report/emotionalIntellegenceTest",
+    },
     { label: "Your Result", href: "/report/emotionalIntelligenceReport" },
   ],
   test5: [
@@ -89,9 +104,14 @@ export default function RouteLayout({ children }: RouteLayoutProps) {
 
       {/* Sidebar Toggle Button for Small Screens */}
       <div className="lg:hidden px-6 py-4">
-        <button onClick={() => setSidebarOpen(true)} className="text-black flex items-center gap-2">
+        <button
+          onClick={() => setSidebarOpen(true)}
+          className="text-black flex items-center gap-2"
+        >
           <Menu size={24} />
-          <span className="font-semibold">{testTitles?.[activeTest]}</span>
+          <span className="font-semibold">
+            {activeTest ? testTitles[activeTest] : "Select a Test"}
+          </span>
         </button>
       </div>
 
@@ -127,15 +147,25 @@ export default function RouteLayout({ children }: RouteLayoutProps) {
                     }}
                   >
                     <Image
-                      src={activeTest === key ? `/assets/${key}Active.png` : `/assets/${key}.png`}
+                      src={
+                        activeTest === key
+                          ? `/assets/${key}Active.png`
+                          : `/assets/${key}.png`
+                      }
                       alt={`${key} icon`}
                       width={24}
                       height={24}
                       className="shrink-0"
                     />
                     <div>
-                      <div className="font-semibold">{testLabel[key].toUpperCase()}</div>
-                      <div className={`text-sm ${testTitlesColor[key]} font-bold`}>{testTitles[key]}</div>
+                      <div className="font-semibold">
+                        {testLabel[key].toUpperCase()}
+                      </div>
+                      <div
+                        className={`text-sm ${testTitlesColor[key]} font-bold`}
+                      >
+                        {testTitles[key]}
+                      </div>
                     </div>
                   </button>
 
