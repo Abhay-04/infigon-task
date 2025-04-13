@@ -202,7 +202,7 @@ export default function RouteLayout({ children }: RouteLayoutProps) {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 p-6 overflow-y-auto">{children}</main>
+        <main className="flex-1 px-6 overflow-y-auto">{children}</main>
       </div>
     </div>
   );
