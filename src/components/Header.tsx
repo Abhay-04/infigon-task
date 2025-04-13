@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 export default function Header() {
@@ -13,16 +14,26 @@ export default function Header() {
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-4 md:gap-10">
-          <Image src="/assets/logo.png" alt="logo" width={36} height={36} />
+          <Link href="/report/personality-explorer">
+            <Image src="/assets/logo.png" alt="logo" width={36} height={36} />
+          </Link>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-6 text-sm text-gray-600">
-            <li className="hover:text-black cursor-pointer">Home</li>
-            <li className="hover:text-black cursor-pointer">My Tests</li>
-            <li className="hover:text-black cursor-pointer">My Sessions</li>
-            <li className="hover:text-black cursor-pointer">Career Library</li>
+            <li className="hover:text-black cursor-pointer">
+              <Link href="/report/personality-explorer">Home</Link>
+            </li>
+            <li className="hover:text-black cursor-pointer">
+              <Link href="/report/personality-explorer">My Tests</Link>
+            </li>
+            <li className="hover:text-black cursor-pointer">
+              <Link href="/report/personality-explorer">My Sessions</Link>
+            </li>
+            <li className="hover:text-black cursor-pointer">
+              <Link href="/report/personality-explorer">Career Library</Link>
+            </li>
             <li className="bg-gray-100 px-3 py-1 rounded text-black font-medium cursor-pointer">
-              Your Report
+              <Link href="/report/personality-explorer">Your Report</Link>
             </li>
           </ul>
         </div>
@@ -59,12 +70,20 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden mt-3">
           <ul className="flex flex-col gap-3 text-sm text-gray-600">
-            <li className="hover:text-black cursor-pointer">Home</li>
-            <li className="hover:text-black cursor-pointer">My Tests</li>
-            <li className="hover:text-black cursor-pointer">My Sessions</li>
-            <li className="hover:text-black cursor-pointer">Career Library</li>
+            <li className="hover:text-black cursor-pointer">
+              <Link href="/report/personality-explorer">Home</Link>
+            </li>
+            <li className="hover:text-black cursor-pointer">
+              <Link href="/report/personality-explorer">My Tests</Link>
+            </li>
+            <li className="hover:text-black cursor-pointer">
+              <Link href="/report/personality-explorer">My Sessions</Link>
+            </li>
+            <li className="hover:text-black cursor-pointer">
+              <Link href="/report/personality-explorer">Career Library</Link>
+            </li>
             <li className="bg-gray-100 px-3 py-1 rounded text-black font-medium cursor-pointer">
-              Your Report
+              <Link href="/report/personality-explorer">Your Report</Link>
             </li>
           </ul>
 
