@@ -2,7 +2,7 @@ import React from "react";
 
 const EmotionalIntelligence = () => {
   return (
-    <section className="px-6  bg-white">
+    <section className="sm:p-6 p-2 bg-white">
       <h2 className="text-2xl font-bold">
         Understanding{" "}
         <span className="text-[#398BFF]">Emotional Intelligence</span>

@@ -2,21 +2,25 @@ import React from "react";
 
 export default function PersonalityExplorer() {
   return (
-    <div className="p-6 max-w-full mx-auto space-y-8">
+    <div className="sm:p-6 p-2 max-w-full mx-auto space-y-8">
       <h1 className="text-3xl font-bold text-[#0047AB]">
-        Understanding Personality Explorer
+        <span className="text-[#252A31]">Understanding</span> Personality Explorer
       </h1>
 
       <section className="">
         <h2 className="text-xl font-semibold">Introduction</h2>
         <p className="text-gray-700 whitespace-pre-line mt-2">
-          Congratulations on taking the first step for personalized Career Planning & Assessment! 
-We understand the significance of making informed decisions as you navigate your academic journey and future career. 
-We are committed to empowering individuals with the tools and insights needed to confidently navigate the world of careers and education.
-
-To understand your personality Myers-Brig Type Indicator (MBTI) test was used. 
-It is a personality explorer psychometric assessment tool that helps individuals understand their preferences, strengths, and areas for growth. 
-The goal is to gain deeper self-awareness, enhance personal development, and improve interpersonal relationships.
+          Congratulations on taking the first step for personalized Career
+          Planning & Assessment! We understand the significance of making
+          informed decisions as you navigate your academic journey and future
+          career. We are committed to empowering individuals with the tools and
+          insights needed to confidently navigate the world of careers and
+          education. To understand your personality Myers-Brig Type Indicator
+          (MBTI) test was used. It is a personality explorer psychometric
+          assessment tool that helps individuals understand their preferences,
+          strengths, and areas for growth. The goal is to gain deeper
+          self-awareness, enhance personal development, and improve
+          interpersonal relationships.
         </p>
       </section>
 

@@ -97,13 +97,13 @@ export default function RouteLayout({ children }: RouteLayoutProps) {
   };
 
   return (
-    <div>
+    <div className="">
       <div className="sm:mb-10 mb-4 w-full">
         <CareerAnalysis />
       </div>
 
       {/* Sidebar Toggle Button for Small Screens */}
-      <div className="lg:hidden px-6 py-4">
+      <div className="lg:hidden px-6 py-4 ">
         <button
           onClick={() => setSidebarOpen(true)}
           className="text-black flex items-center gap-2"
@@ -115,7 +115,7 @@ export default function RouteLayout({ children }: RouteLayoutProps) {
         </button>
       </div>
 
-      <div className="flex h-[calc(100vh-80px)] lg:px-20">
+      <div className="flex h-[calc(100vh-80px)] lg:px-20   ">
         {/* Sidebar */}
         <aside
           className={`fixed lg:static top-0 left-0 z-50 h-full w-72 bg-white border-r border-[#CACACA] text-black overflow-y-auto px-6 py-4 transform transition-transform duration-300 lg:translate-x-0 ${
@@ -129,12 +129,12 @@ export default function RouteLayout({ children }: RouteLayoutProps) {
             </button>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6 ">
             {Object.entries(testLinks).map(([testKey, links]) => {
               const key = testKey as TestKey;
 
               return (
-                <div key={key}>
+                <div key={key} className="border-b-1 border-[#CACACA] pb-3">
                   <button
                     className={`w-full flex items-center gap-3 text-left px-6 py-3 cursor-pointer rounded font-medium ${
                       activeTest === key
