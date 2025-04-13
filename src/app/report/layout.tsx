@@ -115,7 +115,7 @@ export default function RouteLayout({ children }: RouteLayoutProps) {
         </button>
       </div>
 
-      <div className="flex h-[calc(100vh-80px)] lg:px-20   ">
+      <div className="flex h-[calc(100vh-80px)] xl:px-20   ">
         {/* Sidebar */}
         <aside
           className={`fixed lg:static top-0 left-0 z-50 h-full w-72 bg-white border-r border-[#CACACA] text-black overflow-y-auto px-6 py-4 transform transition-transform duration-300 lg:translate-x-0 ${
